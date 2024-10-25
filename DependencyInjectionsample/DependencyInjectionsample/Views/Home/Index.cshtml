@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Employee>
+
+<h2>Employees</h2>
+<a href="/Employee/Create">Create New</a>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Position</td>
+                <td>@emp.Salary</td>
+                <td>
+                    <a href="/Employee/Edit/@emp.Id">Edit</a>
+                    <a href="/Employee/Delete/@emp.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

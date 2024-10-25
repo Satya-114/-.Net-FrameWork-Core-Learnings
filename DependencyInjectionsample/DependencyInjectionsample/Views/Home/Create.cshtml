@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Create Employee";
+}
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" required />
+    </div>
+    <div>
+        <label>Position</label>
+        <input type="text" name="position" required />
+    </div>
+    <div>
+        <label>Salary</label>
+        <input type="number" name="salary" required />
+    </div>
+    <button type="submit">Create</button>
+</form>

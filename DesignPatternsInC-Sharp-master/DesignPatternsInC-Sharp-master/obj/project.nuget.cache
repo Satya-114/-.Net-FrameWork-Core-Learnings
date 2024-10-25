@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "53yr4FnD96uK6IkCjZXZTnWouOON/AMF8alJoh5CZcEwQUTTGuJ77wWiAmM/vkPWKiW81mn0GAFLUaVW1s6TmQ==",
+  "success": true,
+  "projectFilePath": "E:\\Personal Learnings\\DesignPatternsInC-Sharp-master\\DesignPatternsInC-Sharp-master\\DesignPatternsInC-Sharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Satya Maddila\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Satya Maddila\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Satya Maddila\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Satya Maddila\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

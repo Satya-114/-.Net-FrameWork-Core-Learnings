@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DataAccess.Entities.Employee>
+
+<h1>Employees</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Practice</th>
+            <th>Department</th>
+            <th>Projects</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Position</td>
+                <td>@employee.Practice.PracticeName</td>
+                <td>@employee.Practice.Department.DepartmentName</td>
+                <td>
+                    @foreach (var project in employee.EmployeeProjects.Select(ep => ep.Project))
+                    {
+                        @project.ProjectName<br />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@employee.EmployeeId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@employee.EmployeeId">Edit</a> |
+                    <form asp-action="Delete" asp-route-id="@employee.EmployeeId" method="post" style="display:inline">
+                        <button type="submit" class="btn btn-link">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Employee</a>

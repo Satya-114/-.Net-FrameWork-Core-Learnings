@@ -1,0 +1,30 @@
+﻿@model DataAccess.Entities.Employee
+
+<h1>@Model.Name</h1>
+
+<div>
+    <h4>Employee Details</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Position</dt>
+        <dd class="col-sm-10">@Model.Position</dd>
+
+        <dt class="col-sm-2">Practice</dt>
+        <dd class="col-sm-10">@Model.Practice.PracticeName</dd>
+
+        <dt class="col-sm-2">Department</dt>
+        <dd class="col-sm-10">@Model.Practice.Department.DepartmentName</dd>
+
+        <dt class="col-sm-2">Projects</dt>
+        <dd class="col-sm-10">
+            @foreach (var project in Model.EmployeeProjects.Select(ep => ep.Project))
+            {
+                @project.ProjectName
+
+                <br />
+            }
+        </dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.EmployeeId" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

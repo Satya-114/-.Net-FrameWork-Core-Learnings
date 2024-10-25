@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RepositoryPattern.Models.Book>
+@{
+    ViewBag.Title = "Index";
+}
+<div align="center">
+    <h3> Book Management </h3>
+    <span> <a href="@Url.Action("AddBook","Book")">Add Book</a></span>
+    <br />
+    <br />
+    <table cellpadding="5" border="1">
+        <tr style="background-color:#808080; color:white;">
+            <td>BookId </td>
+            <td>BookTitle </td>
+            <td>Standard </td>
+            <td>Subject</td>
+            <td>Author </td>
+        </tr>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookId </td>
+                <td>@book.BookTitle</td>
+                <td>@book.Standard </td>
+                <td>@book.Subject </td>
+                <td>@book.Author </td>
+                <td>
+                    <a href="@Url.Action("EditBook", "Book", new { @BookId = book.BookId })"> Edit </a>
+                    <a href="@Url.Action("DeleteBook", "Book", new { @BookId = book.BookId })"> Delete </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
